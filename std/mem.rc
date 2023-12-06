@@ -1,0 +1,2 @@
+extern "c" calloc(n: size, sz: size): ref mut anyopaque
+extern "c" free(ptr: ref mut anyopaque): void

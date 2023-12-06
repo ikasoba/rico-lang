@@ -1,0 +1,27 @@
+struct Table {
+  keys: str[],
+  values: ref mut anyopaque[]
+}
+
+func Table_index(self: ref Table, key: str): int {
+  let mut i: int = 0
+  loop {
+    if (unref self).keys[i] == key {
+      return i
+    } else if (unref self).keys.length >= i {
+      return -1
+    }
+  }
+}
+
+func Table_set(self: ref Table, key: str, value: anyopaque): void {
+  let i = Table_index(key)
+
+  (unref self).key[i] = value
+}
+
+func Table_get(self: ref Table, key: str): anyopaque {
+  let i = Table_index(key)
+
+  return (unref self).key[i]
+}

@@ -1,0 +1,6 @@
+include "./mem.rc"
+
+extern "c" func puts(text: []u8): int
+
+func print(text: str): int {
+}

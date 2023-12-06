@@ -1,0 +1,7 @@
+include "std/io.ric"
+
+fn main(): integer {
+  print "hello world!"
+
+  return 0
+}
